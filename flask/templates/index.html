@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+</head>
+<body>
+    <h1>Churn Prediction Input</h1>
+    <form action="/predict" method="post">
+        <label for="qorders">Quantity of Orders:</label>
+        <input type="number" id="qorders" name="qorders" required><br>
+        
+        <label for="days_since_registration">Days Since Registration:</label>
+        <input type="number" id="days_since_registration" name="days_since_registration" required><br>
+        
+        <label for="days_since_last_purchase">Days Since Last Purchase:</label>
+        <input type="number" id="days_since_last_purchase" name="days_since_last_purchase" required><br>
+        
+        <label for="qcity">City:</label>
+        <input type="number" id="qcity" name="qcity" required><br>
+        
+        <label for="app_type_COURIER">App Type (Courier):</label>
+        <input type="number" id="app_type_COURIER" name="app_type_COURIER" required><br>
+        
+        <label for="app_type_IPHONE">App Type (iPhone):</label>
+        <input type="number" id="app_type_IPHONE" name="app_type_IPHONE" required><br>
+        
+        <label for="app_type_WEB">App Type (Web):</label>
+        <input type="number" id="app_type_WEB" name="app_type_WEB" required><br>
+        
+        <label for="app_type_WEB_MOBILE">App Type (Web Mobile):</label>
+        <input type="number" id="app_type_WEB_MOBILE" name="app_type_WEB_MOBILE" required><br>
+        
+        <label for="gender_MALE">Gender (Male):</label>
+        <input type="number" id="gender_MALE" name="gender_MALE" required><br>
+        
+        <label for="gender_UNKNOWN">Gender (Unknown):</label>
+        <input type="number" id="gender_UNKNOWN" name="gender_UNKNOWN" required><br>
+        
+        <label for="income_LOW">Income (Low):</label>
+        <input type="number" id="income_LOW" name="income_LOW" required><br>
+        
+        <label for="income_MID">Income (Mid):</label>
+        <input type="number" id="income_MID" name="income_MID" required><br>
+        
+        <label for="income_MID_HIGH">Income (Mid High):</label>
+        <input type="number" id="income_MID_HIGH" name="income_MID_HIGH" required><br>
+        
+        <label for="income_MID_LOW">Income (Mid Low):</label>
+        <input type="number" id="income_MID_LOW" name="income_MID_LOW" required><br>
+        
+        <label for="income_UNKNOWN">Income (Unknown):</label>
+        <input type="number" id="income_UNKNOWN" name="income_UNKNOWN" required><br>
+        
+        <label for="lifecycle_New">Lifecycle (New):</label>
+        <input type="number" id="lifecycle_New" name="lifecycle_New" required><br>
+        
+        <label for="lifecycle_Onboarded">Lifecycle (Onboarded):</label>
+        <input type="number" id="lifecycle_Onboarded" name="lifecycle_Onboarded" required><br>
+        
+        <label for="lifecycle_Prospect">Lifecycle (Prospect):</label>
+        <input type="number" id="lifecycle_Prospect" name="lifecycle_Prospect" required><br>
+        
+        <label for="lifecycle_Stable">Lifecycle (Stable):</label>
+        <input type="number" id="lifecycle_Stable" name="lifecycle_Stable" required><br>
+        
+        <label for="lifecycle_Super_Heavy">Lifecycle (Super Heavy):</label>
+        <input type="number" id="lifecycle_Super_Heavy" name="lifecycle_Super_Heavy" required><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

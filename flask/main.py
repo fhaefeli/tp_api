@@ -17,11 +17,11 @@ def predict():
     qorders = int(request.form["qorders"])
     days_since_registration = int(request.form["days_since_registration"])
     days_since_last_purchase = int(request.form["days_since_last_purchase"])
-    qcity = int(request.form["qcity"])
-    app_type_COURIER = int(request.form["app_type_COURIER"])
-    app_type_IPHONE = int(request.form["app_type_IPHONE"])
-    app_type_WEB = int(request.form["app_type_WEB"])
-    app_type_WEB_MOBILE = int(request.form["app_type_WEB_MOBILE"])
+    # qcity = int(request.form["qcity"])
+    # app_type_COURIER = int(request.form["app_type_COURIER"])
+    # app_type_IPHONE = int(request.form["app_type_IPHONE"])
+    # app_type_WEB = int(request.form["app_type_WEB"])
+    # app_type_WEB_MOBILE = int(request.form["app_type_WEB_MOBILE"])
     gender_MALE = int(request.form["gender_MALE"])
     gender_UNKNOWN = int(request.form["gender_UNKNOWN"])
     income_LOW = int(request.form["income_LOW"])
@@ -37,8 +37,7 @@ def predict():
     
     # Prepare features for prediction
     features = [
-        qorders, days_since_registration, days_since_last_purchase, qcity,
-        app_type_COURIER, app_type_IPHONE, app_type_WEB, app_type_WEB_MOBILE,
+        qorders, days_since_registration, days_since_last_purchase,
         gender_MALE, gender_UNKNOWN, income_LOW, income_MID, income_MID_HIGH,
         income_MID_LOW, income_UNKNOWN, lifecycle_New, lifecycle_Onboarded,
         lifecycle_Prospect, lifecycle_Stable, lifecycle_Super_Heavy
@@ -53,4 +52,5 @@ def predict():
     return render_template("result.html", prediction=prediction[0])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000)

@@ -4,10 +4,12 @@
 sudo apt-get update -y
 
 # Instalar Python y pip
-sudo apt-get install python3 python3-pip -y
+# sudo apt-get install python3 python3-pip -y
+sudo apt-get install python3 pip -y
 
 # Crear un entorno virtual
-python3 -m venv venv
+# python3 -m venv venv
+virtualenv venv
 
 # Activar el entorno virtual
 source venv/bin/activate
